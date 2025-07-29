@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationStack {
+            List {
+                NavigationLink("Natural Language") {
+                    NaturalLanguageView()
+                }
+                
+                NavigationLink("Text In Image Recognizer") {
+                    MainView()
+                }
+                //
+                //                       NavigationLink("Feature 3") {
+                //                           Feature3View()
+                //                       }
+                //
+                //                       NavigationLink("Feature 4") {
+                //                           Feature4View()
+                //                       }
+            }
+            .navigationTitle("Main Menu")    }
     }
 }
 
